@@ -1,0 +1,77 @@
+body {
+    font-family: Georgia, "Times New Roman", Times, serif;
+    color: white;
+    background: orangered;
+    text-align: center;
+    background-image: url(https://i.pinimg.com/originals/29/3c/a7/293ca7e68eae5411debb61f2173dfb90.jpg);
+}
+h1{
+    margin-top: 0;
+    font-family: Arial;
+    font-weight: normal;
+    color: lightseagreen;
+}
+
+p {
+    font-family: 'Source Sans Pro';
+    font-size: 16px;
+    font-weight:500;
+}
+
+#bloggielink {
+    font-weight: bold;
+    color: white ;
+    font-size: 50px;
+    text-align: center;
+    border: 3px solid white;
+    padding: 10px;
+}
+
+.card-body {
+    color:black;
+    background-color:#fd3b3b;
+    font-weight: bold;
+    background-image: url(http://zhuokongwang.com/wp-content/uploads/2018/10/japanese-maple-trees-autumn-wallpapers-best-of-autumn-wallpaper-of-japanese-maple-trees-autumn-wallpapers.jpg);
+
+}
+
+.bg-secondary {
+    background-color: #FF5722!important;
+}
+
+.btn-primary {
+    color: white;
+    background-color:#d60000;
+    border-color:#e74c17;
+}
+
+h5 {
+    font-weight: bold;
+}
+
+
+#input1-bar {
+    margin: 0px;
+    text-align: center;
+    justify-content: center;
+    font-family: inherit;
+    font-size: xx-large;
+    line-height: normal;
+    margin-top: 100px;
+}
+
+#input2-bar {
+    margin: 0px;
+    text-align: center;
+    justify-content: center;
+    font-family: inherit;
+    font-size: xx-large;
+    line-height: normal;
+    margin-top: 100px;
+}
+
+#submit-btn {
+    font-size: xx-large;
+    background-color:crimson;
+
+}
