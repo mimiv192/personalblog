@@ -1,9 +1,16 @@
 import { Router } from 'express';
-import peopleRouter from './people';
-import blogsRouter from './blogs';
+import {tokenMiddleware, isLoggedIn} from '../middleware/auth.mw';
+import apiRouter from './api';
+import authRouter from './auth';
 let router = Router();
 
-router.use('/people', peopleRouter);
-router.use('/blogs', blogsRouter);
+router.use('/auth', authRouter);
 
+router.route('*')
+    .post(tokenMiddleware, isLoggedIn)
+    .put(tokenMiddleware, isLoggedIn)
+    .delete(tokenMiddleware, isLoggedIn);
+
+
+router.use('/api', apiRouter);
 export default router;

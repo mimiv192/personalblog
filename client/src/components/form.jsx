@@ -44,7 +44,7 @@ this.props.history.push(`/single/${data.id}`)
             <form>
                 <input
                     name='title'
-                    id= 'input1-bar'
+                    id= 'input1-bar' 
                     placeholder='Title'
                     value={this.state.title}
                     onChange={e => this.change(e)}

@@ -1,7 +1,9 @@
 import { Router } from 'express';
 // import {addBlogs} from 'src/config/db';
-import Table from '../table';
+import Table from '../../table';
 let router = Router();
+
+
 
 let blogsTable = new Table('blogs');
 
@@ -40,6 +42,7 @@ router.delete('/:id', (req,res)=> {
             .catch(e => res.send(e));
   
 });
+
 
 
 export default router;

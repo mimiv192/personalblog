@@ -5,10 +5,12 @@ import HelloWorld from './hello';
 import Frontpage from './frontpage';
 import BlogsTimeline from './blogstimeline';
 import SingleBlog from './singleblog';
-
-
-
-
+import PrivateRoute from './auth/PrivateRoute';
+import AuthButton from './auth/authButton';
+import Login from './auth/login';
+import Logout from './auth/logout';
+import Form from './form'
+import router from '../services/blogs';
 
 class Navigation extends Component {
     render() {
@@ -16,16 +18,21 @@ class Navigation extends Component {
             <Router>
                 <Fragment>
                     <Link to="/blogstimeline" id="bloggielink" >Bloggie</Link>
+                    
 
 
+                        <AuthButton />
                     <Switch>
+                        <Route path="/login" component={Login} />
+                        <Route path="/logout" component={Logout} />
                         <Route exact path="/" component={Frontpage} />
 
-
+                        <PrivateRoute exact path='/compose' component={Form} />
 
                         <Route path="/blogstimeline" component={BlogsTimeline} />
 
                         <Route path="/single/:id" component={SingleBlog} />
+
                     </Switch>
                 </Fragment>
             </Router>

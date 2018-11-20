@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import BlogsCard from './blogscard';
 
+
 class BlogsTimeline extends Component {
     constructor(props) {
         super(props);

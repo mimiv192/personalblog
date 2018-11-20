@@ -6,7 +6,7 @@ import routes from './routes';
 import stateRouting from './middleware/routing.mw';
 import { createConnection } from 'net';
 import router from './routes';
-
+import configurePassport from './config/passport';
 
 
 var app= express();
@@ -23,7 +23,10 @@ app.use(morgan('dev'));
 app.use(express.static(CLIENT_PATH));
 app.use(express.json());
 
-app.use('/api', routes);
+configurePassport(app);
+
+
+app.use('/', routes);
 
 app.use(stateRouting);
 
